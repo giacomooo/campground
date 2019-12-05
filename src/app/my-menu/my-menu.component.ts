@@ -10,11 +10,12 @@ export class MyMenuComponent implements OnInit {
 
   menuItems: any;
 
-  constructor() { 
+  constructor() {
     this.menuItems = {name:'sadf',
     link: 'next', multi: ['000', '111', '222'] };
   }
 
   ngOnInit() {
+
   }
 }
