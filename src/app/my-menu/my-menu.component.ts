@@ -12,7 +12,7 @@ export class MyMenuComponent implements OnInit {
 
   constructor() { 
     this.menuItems = {name:'sadf',
-    link: 'next', multi: ['000','111','222'] }; 
+    link: 'next', multi: ['000', '111', '222'] };
   }
 
   ngOnInit() {
