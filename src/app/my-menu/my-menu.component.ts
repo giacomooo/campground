@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MatMenuModule} from '@angular/material/menu';
 
 @Component({
   selector: 'app-my-menu',
@@ -11,7 +12,7 @@ export class MyMenuComponent implements OnInit {
   menuItems: any;
 
   constructor() {
-    this.menuItems = {name:'sadf',
+    this.menuItems = {name: 'sadf',
     link: 'next', multi: ['000', '111', '222'] };
   }
 

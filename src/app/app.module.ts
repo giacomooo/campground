@@ -10,6 +10,23 @@ import { MaterialModule} from './material/material.module';
 import { MaphilightModule } from 'ng-maphilight';
 import { CampgroundComponent } from './campground/campground.component'
 import {MatSliderModule} from '@angular/material/slider';
+import { RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: 'campground', component: CampgroundComponent },
+  { path: 'campground/:id', component: CampgroundComponent }, /*
+  {
+    path: 'heroes',
+    component: HeroListComponent,
+    data: { title: 'Heroes List' }
+  }, */
+  { path: '',
+    redirectTo: '/campground',
+    pathMatch: 'full'
+  },
+  { path: '**', component: CampgroundComponent }
+];
+
 
 @NgModule({
   declarations: [
@@ -23,7 +40,11 @@ import {MatSliderModule} from '@angular/material/slider';
     BrowserAnimationsModule,
     MaterialModule,
     MaphilightModule,
-    MatSliderModule
+    MatSliderModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true }
+        )
   ],
   providers: [],
   bootstrap: [AppComponent]
