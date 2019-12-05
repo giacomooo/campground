@@ -8,9 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule} from './material/material.module';
 import { MaphilightModule } from 'ng-maphilight';
-import { CampgroundComponent } from './campground/campground.component'
+import { CampgroundComponent } from './campground/campground.component';
 import {MatSliderModule} from '@angular/material/slider';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
   { path: 'campground', component: CampgroundComponent },
