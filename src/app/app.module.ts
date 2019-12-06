@@ -8,13 +8,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule} from './material/material.module';
 import { MaphilightModule } from 'ng-maphilight';
-import { CampgroundComponent } from './campground/campground.component'
-import {MatSliderModule} from '@angular/material/slider';
-import { RouterModule } from '@angular/router';
+import { CampgroundComponent } from './campground/campground.component';
+import { MatSliderModule } from '@angular/material/slider';
+import { RouterModule, Routes } from '@angular/router';
+import { CampOverviewComponent } from './campOverview/campOverview.component';
 
 const appRoutes: Routes = [
   { path: 'campground', component: CampgroundComponent },
-  { path: 'campground/:id', component: CampgroundComponent }, /*
+  { path: 'campoverview', component: CampOverviewComponent },
+  /*
   {
     path: 'heroes',
     component: HeroListComponent,
@@ -32,7 +34,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     MyMenuComponent,
-    CampgroundComponent
+    CampgroundComponent,
+    CampOverviewComponent
   ],
   imports: [
     BrowserModule,
