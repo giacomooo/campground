@@ -12,6 +12,8 @@ import { CampgroundComponent } from './campground/campground.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { RouterModule, Routes } from '@angular/router';
 import { CampOverviewComponent } from './campOverview/campOverview.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
   { path: 'campground', component: CampgroundComponent },
@@ -35,7 +37,9 @@ const appRoutes: Routes = [
     AppComponent,
     MyMenuComponent,
     CampgroundComponent,
-    CampOverviewComponent
+    CampOverviewComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

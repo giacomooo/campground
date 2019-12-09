@@ -13,7 +13,8 @@ export class MyMenuComponent implements OnInit {
 
   constructor() {
    this.menuItems = [{tabDescription: 'Reservation', link: '/reservation' },
-                      {tabDescription: 'Events', link:  '/Events'}];
+   {tabDescription: 'Home', link: '/home' },
+   {tabDescription: 'Events', link:  '/Events'}];
   }
 
   ngOnInit() {
