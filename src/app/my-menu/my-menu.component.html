@@ -1,1 +1,13 @@
-<button mat-button *ngFor="let x of menuItems">{{x.tabDescription}}</button>
+<!-- <button mat-button *ngFor="let x of menuItems"  >{{x.tabDescription}}</button>
+ -->
+<!-- <button mat-button *ngFor="let x of menuItems" [matMenuTriggerFor]="menu" >{{x.tabDescription}}</button>
+ -->
+<!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item *ngFor="let x of menuItems">{{x.tabDescription}}</button>
+</mat-menu> -->
+
+
+
+
+<a *ngFor="let x of menuItems" href={{x.link}}><button mat-menu-item >{{x.tabDescription}}</button></a>

@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CampOverviewComponent implements OnInit {
 
-
   ngOnInit() {
   }
-
 }
