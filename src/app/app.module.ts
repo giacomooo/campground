@@ -12,22 +12,8 @@ import { CampgroundComponent } from './campground/campground.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { RouterModule, Routes } from '@angular/router';
 import { CampOverviewComponent } from './campOverview/campOverview.component';
-
-const appRoutes: Routes = [
-  { path: 'campground', component: CampgroundComponent },
-  { path: 'campoverview', component: CampOverviewComponent },
-  /*
-  {
-    path: 'heroes',
-    component: HeroListComponent,
-    data: { title: 'Heroes List' }
-  }, */
-  { path: '',
-    redirectTo: '/campground',
-    pathMatch: 'full'
-  },
-  { path: '**', component: CampgroundComponent }
-];
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -35,7 +21,9 @@ const appRoutes: Routes = [
     AppComponent,
     MyMenuComponent,
     CampgroundComponent,
-    CampOverviewComponent
+    CampOverviewComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -43,11 +31,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MaterialModule,
     MaphilightModule,
-    MatSliderModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true }
-        )
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
