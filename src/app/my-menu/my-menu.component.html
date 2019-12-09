@@ -8,6 +8,11 @@
 </mat-menu> -->
 
 
+<!-- <a *ngFor="let x of menuItems" href={{x.link}}><button mat-menu-item >{{x.tabDescription}}</button></a>
+ -->
+<!-- <button mat-button *ngFor="let x of menuItems"><a href={{x.link}}> {{x.tabDescription}} </a></button>
+ --><!-- <a *ngFor="let x of menuItems" href={{x.link}}><button mat-menu-item >{{x.tabDescription}}</button></a>
+ -->
 
+ <a *ngFor="let x of menuItems" mat-stroked-button routerLink=".{{x.link}}">{{x.tabDescription}}</a>
 
-<a *ngFor="let x of menuItems" href={{x.link}}><button mat-menu-item >{{x.tabDescription}}</button></a>
