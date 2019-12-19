@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MenuItem } from './menuItem';
 
 @Component({
@@ -12,11 +12,11 @@ export class MyMenuComponent {
   menuItems: MenuItem[];
 
   constructor() {
-   this.menuItems = [{tabDescription: 'Reservation', link: '/reservation' },
-   {tabDescription: 'Home', link: '/home' },
-   {tabDescription: 'Login', link: '/login' },
-   {tabDescription: 'CampGround', link: '/campground' },
-   {tabDescription: 'Events', link:  '/Events'}];
+    this.menuItems = [
+      {tabDescription: 'Home', link: '/home' },
+      {tabDescription: 'Reservation', link: '/reservation' },
+      {tabDescription: 'Events', link:  '/Events'},
+      {tabDescription: 'Login', link: '/login' },
+    ];
   }
-
 }

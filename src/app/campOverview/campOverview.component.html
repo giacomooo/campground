@@ -1,1 +1,10 @@
-<p>camp-overview works!</p>
+<maphilight id="statesMap" [config]="config" [hidden]="hidden">
+    <img id="themap" src="assets/planimetria-generale.jpg" usemap="#image-map" height="400">
+
+    <map name="image-map">
+        <area *ngFor="let x of campground.stellplatz" coords="{{x.coords}}" shape="poly" href="{{x.id}}"
+            class={{x.verfuegbar}}>
+    </map>
+
+</maphilight>
+

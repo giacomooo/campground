@@ -1,8 +1,51 @@
-<maphilight id="statesMap" [config]="config" [hidden]="hidden">
-    <img id="themap" src="assets/planimetria-generale.jpg" usemap="#image-map">
-
-    <map name="image-map">
-        <area *ngFor="let x of campground.stellplatz" coords="{{x.coords}}" shape="poly" href="{{x.id}}"
-            class={{x.verfuegbar}}>
-    </map>
-</maphilight>
+<mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Stellplatz 47
+            </mat-panel-title>
+            <mat-panel-description>
+              verfügbar bis dd.mm.yyyy
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+      
+          <mat-form-field>
+            <input matInput placeholder="First name">
+          </mat-form-field>
+      
+          <mat-form-field>
+            <input matInput placeholder="Age">
+          </mat-form-field>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Stellplatz 47
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    verfügbar bis dd.mm.yyyy
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+            
+                <mat-form-field>
+                  <input matInput placeholder="First name">
+                </mat-form-field>
+            
+                <mat-form-field>
+                  <input matInput placeholder="Age">
+                </mat-form-field>
+              </mat-expansion-panel>
+      
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Self aware panel
+            </mat-panel-title>
+            <mat-panel-description>
+              Currently I am {{panelOpenState ? 'open' : 'closed'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+      </mat-accordion>
