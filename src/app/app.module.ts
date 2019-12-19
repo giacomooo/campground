@@ -10,10 +10,10 @@ import { MaterialModule} from './material/material.module';
 import { MaphilightModule } from 'ng-maphilight';
 import { CampgroundComponent } from './campground/campground.component';
 import { MatSliderModule } from '@angular/material/slider';
-import { RouterModule, Routes } from '@angular/router';
 import { CampOverviewComponent } from './campOverview/campOverview.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 
 @NgModule({
@@ -23,7 +23,8 @@ import { LoginComponent } from './login/login.component';
     CampgroundComponent,
     CampOverviewComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,
