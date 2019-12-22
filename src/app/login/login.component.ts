@@ -2,10 +2,43 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
-
 import { AlertService, AuthenticationService } from '../_services';
+// import { MatProgressButtonOptions } from '@angular/material';
 
-@Component({ templateUrl: 'login.component.html' })
+@Component({ templateUrl: 'login.component.html',
+styles: [
+    `
+      :host {
+        display: flex;
+        justify-content: center;
+        margin: 100px 0px;
+      }
+
+      .mat-form-field {
+        width: 100%;
+        min-width: 300px;
+      }
+
+      mat-card-title,
+      mat-card-content {
+        display: flex;
+        justify-content: center;
+      }
+
+      .error {
+        padding: 16px;
+        width: 300px;
+        color: white;
+        background-color: red;
+      }
+
+      .button {
+        display: flex;
+        justify-content: flex-end;
+      }
+    `,
+  ]
+})
 
 export class LoginComponent implements OnInit {
     loginForm: FormGroup;
@@ -26,6 +59,10 @@ export class LoginComponent implements OnInit {
         }
     }
 
+/*     barButtonOptions: MatProgressButtonOptions = {
+      active: false
+    };
+ */
     ngOnInit() {
         this.loginForm = this.formBuilder.group({
             username: ['', Validators.required],
