@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
-
 import { AlertService, AuthenticationService } from '../_services';
+// import { MatProgressButtonOptions } from '@angular/material';
 
 @Component({ templateUrl: 'login.component.html',
 styles: [
@@ -59,6 +59,10 @@ export class LoginComponent implements OnInit {
         }
     }
 
+/*     barButtonOptions: MatProgressButtonOptions = {
+      active: false
+    };
+ */
     ngOnInit() {
         this.loginForm = this.formBuilder.group({
             username: ['', Validators.required],
